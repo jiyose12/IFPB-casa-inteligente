@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Notas e Faltas Aluno</title>
+
+</head>
+<body>
+<section layout:fragment="content">
+<div class="container">
+
+    <h1>Minhas Notas de {{Disciplina}}</h1>
+
+<!-- row faltas -->
+<div class="row">
+ <div class="col-sm">
+      <h2>Faltas</h1>
+    </div>
+    <div class="col-sm">
+      <div class="center"><h2>18%</h2></div>
+      <div class="center"><h5>9/50 aulas</h5></div>
+    </div>
+</div>
+<!-- row notas-->
+<div class="row">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Primeira Nota</th>
+      <th scope="col">Segunda Nota</th>
+      <th scope="col">Terceira Nota</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">#</th>
+      <td>10</td>
+      <td>5</td>
+      <td>7</td>
+    </tr>
+   
+  </tbody>
+</table>
+</div>
+</div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout.html}"> 
+<head>
+<meta charset="UTF-8" />
+<title></title>
+
+</head>
+<body>
+	<section layout:fragment="content">
+		<div class="container">
+
+			<!-- <h1>Professor <span th:utext="${session.usuario.nome}">Description</span></h1> -->
+			<div class="container-fluid">
+			
+			  
+				 <div class="row" style = "margin-top:60px;">
+				 <div class="col col-sm-4 col-xm-12">
+				 
+				 	<a th:href="@{/festa-em-casa}" style=" border-radius: 15px">
+				   <div class="card hvr-grow" style="width: 18rem;border-radius: 3px;border-color: #007bff;border-width: 2px;">
+				  
+				  <img th:src="@{/images/Festa-em-casa.jpg}" class="card-img-top" alt="..." style="
+				    width: 284px;
+				    height: 192px;">
+				   <h5 class="card-title text-center">Festa em Casa</h5>
+				   </div> 
+				</a>    
+				</div> 
+				
+				<div class="col col-sm-4 col-xm-12">
+				 
+				 	<a th:href="@{/festa-na-piscina}" style=" border-radius: 15px">
+				   <div class="card hvr-grow" style="width: 18rem;border-radius: 3px;border-color: #007bff;border-width: 2px;">
+				  
+				  <img th:src="@{/images/Festa-na-piscina2.jpg}" class="card-img-top" alt="..." style="
+				    width: 284px;
+				    height: 192px;">
+				   <h5 class="card-title text-center">Festa na Piscina</h5>
+				   </div> 
+				</a>   
+				</div> 
+				
+				<div class="col col-sm-4 col-xm-12">
+				 
+				 	<a th:href="@{/padrao}" style=" border-radius: 15px">
+				   <div class="card hvr-grow" style="width: 18rem;border-radius: 3px;border-color: #007bff;border-width: 2px;">
+				  
+				  <img th:src="@{/images/sala-de-estar-destacada.jpg}" class="card-img-top" alt="..." style="
+				    width: 284px;
+				    height: 192px;">
+				   <h5 class="card-title text-center">Padrão</h5>
+				   </div> 
+				</a>   
+				</div> 
+			
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>

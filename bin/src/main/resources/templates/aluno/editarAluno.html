@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Edit Aluno</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    
+
+</head>
+<body>
+<section layout:fragment="content">
+<div class="container">
+
+    <h1>Editar Aluno</h1>
+    <a href="/aluno/list" class="btn btn-primary">Volta</a> 
+    <div align="right">
+        <form th:action="@{/employee/list}" method="get">
+            <div class="input-group input-group-sm" style="width: 450px;">
+                <input type="text" name="value" class="form-control pull-right" placeholder="Pencarian Berdasarnkan Nama" th:if="${key} == null"/>
+                <input type="text" name="value" class="form-control pull-right" placeholder="Pencarian Berdasarnkan Nama" th:if="${key} != null" th:value="${key}" />
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>Go...</button>
+                </div>
+            </div>
+        </form>
+    </div>
+<!-- datatable bootstrap4 -->
+   
+   
+      <div class="card">
+            <div class="card-body">
+                <div class="col-md-8">
+                   <form action="#" th:action="@{/aluno/update/{id}(id=${usuario.id})}" th:object="${usuario}" method="post">
+                        <div class="row">
+                        
+                        		 <div class="form-group col-md-8">
+                                <label for="nome" class="col-form-label">Nome</label> <input type="text" th:field="*{nome}" class="form-control" id="nome" placeholder="Nome"> <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="text-danger"></span>
+                            </div>
+                            
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Email</label> <input type="text" th:field="*{email}" class="form-control" id="email" placeholder="Email"> <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></span>
+                            </div>
+                            
+                            <div class="form-group col-md-8">
+                                <label for="tipo" class="col-form-label">Tipo</label> <input type="text" th:field="*{tipo}" class="form-control" id="tipo" placeholder="tipo"> 
+                            </div>
+                            
+
+                            <div class="form-group col-md-8">
+                                <input type="submit" class="btn btn-primary" value="edit Usuario">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<!-- fim datable -->
+</div>
+
+
+</section>
+
+</body>
+</html>

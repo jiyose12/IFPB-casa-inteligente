@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout.html}">
+
+<head>
+<meta charset="UTF-8" />
+<title>Aluno</title>
+
+</head>
+<body>
+	<section layout:fragment="content">
+		<div class="container">
+
+			<h1>Aluno</h1>
+			<div class="container-fluid">
+				<div class="row ">
+
+					<div class="col-sm d-flex justify-content-around mb-4">
+
+						<div class="card" style="width: 18rem;">
+
+							<img th:src="@{/images/dicip.png}" class="card-img-top" alt="..."
+								style="width: 185px; margin-left: 43px;">
+							<h5 class="card-title text-center">Visualizar Disciplina</h5>
+							<div class="card-body">
+
+								<button type="button" class="btn btn-success btn-lg btn-block">Ver</button>
+								
+							</div>
+						</div>
+
+						<div class="card" style="width: 18rem;">
+
+							<img th:src="@{/images/notaFalta.png}" class="card-img-top" alt="..."
+								style="width: 185px; margin-left: 43px;">
+
+							<h5 class="card-title text-center">Visualizar Nota e Falta</h5>
+							<div class="card-body">
+								<button type="button" class="btn btn-success btn-lg btn-block">Ver</button>
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+	</section>
+
+</body>
+</html>

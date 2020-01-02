@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Coordenador</title>
+
+</head>
+<body>
+<section layout:fragment="content">
+<div class="container">
+<div style="
+    margin-left: 500px;
+    margin-bottom: -46px;
+" >
+	<button type="button" class="btn btn-primary">Cadastrar Professor Disciplina</button> 
+	<button type="button" class="btn btn-primary">Visualizar Disciplina</button> 
+	<button type="button" class="btn btn-primary">Matricular Aluno</button> 
+</div>
+
+    <h1>Coordenador</h1>
+    
+ <div class="row" style = "margin-top:60px;">
+ <div class="col-sm d-flex justify-content-around mb-4">
+ 
+   <div class="card" style="width: 18rem;">
+  
+  <img th:src="@{/images/prof.png}" class="card-img-top" alt="..." style="
+    width: 185px;
+    margin-left: 43px;">
+   <h5 class="card-title text-center">Professor</h5>
+  <div class="card-body">
+  
+  	
+	
+	<a href="professor/signup" class="btn btn-primary">Cadastrar</a>    
+	<a href="professor/list" class="btn btn-success">Lista</a>
+	
+  </div>
+</div>
+
+  <div class="card" style="width: 18rem;">
+  
+  <img th:src="@{/images/stud.png}"  class="card-img-top" alt="..." style="
+    width: 185px;
+    margin-left: 43px;">
+  
+   <h5 class="card-title text-center">Aluno</h5>
+  <div class="card-body">
+  	<a href="aluno/signup" class="btn btn-primary">Cadastrar</a>    
+	<a href="aluno/list" class="btn btn-success">Lista</a>
+  
+  </div>
+</div>
+  
+</div>
+</div>
+
+ 
+
+ 
+
+
+
+<div class="row">
+ <div class="col-sm d-flex justify-content-around mb-4">
+     <div class="card" style="width: 18rem;">
+  
+  <img th:src="@{/images/dicip.png}"  class="card-img-top" alt="..." style="
+    width: 185px;
+    margin-left: 43px;">
+   <h5 class="card-title text-center">Disciplina</h5>
+  <div class="card-body">
+  	<a href="disciplina/signup" class="btn btn-primary">Cadastrar</a>   
+	<a href="disciplina/list" class="btn btn-success">Lista</a> 
+  
+    
+  </div>
+</div>
+
+  <div class="card" style="width: 18rem;">
+  
+  <img th:src="@{/images/tt.png}"  class="card-img-top" alt="..." style="
+    width: 185px;
+    margin-left: 43px;">
+   <h5 class="card-title text-center">Turma</h5>
+  <div class="card-body">
+	<button type="button" class="btn btn-primary">Cadastrar</button>  
+	<button type="button" class="btn btn-success">Lista</button>  
+  </div>
+</div>
+   
+</div>
+</div>
+
+
+
+</section>
+
+</body>
+</html>

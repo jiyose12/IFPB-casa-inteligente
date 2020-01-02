@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Turma Professor</title>
+
+</head>
+<body>
+<section layout:fragment="content">
+<div class="container">
+    <h1>Minha Turma</h1>
+    
+<!-- nav tab bootstrap4 -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" href="#mat" role="tab" data-toggle="tab">Alunos Matriculados</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#freq" role="tab" data-toggle="tab">Registros de Frequência</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#aula" role="tab" data-toggle="tab">Registros de Aula</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#nota" role="tab" data-toggle="tab">Registros de Notas</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="mat">Aqui ficarão os alunos matriculados</div>
+  <div role="tabpanel" class="tab-pane fade" id="freq">Eis o registro de frequência</div>
+  <div role="tabpanel" class="tab-pane fade" id="aula">Registros de aulas ficarão aqui</div>
+  <div role="tabpanel" class="tab-pane fade" id="nota">Aqui ficará o registro de notas dos alunos</div>
+</div>
+<!-- fim nav tab -->
+</div>
+</section>
+
+</body>
+</html>

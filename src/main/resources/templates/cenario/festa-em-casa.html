@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout.html}">
+
+<head>
+<meta charset="UTF-8" />
+<title>Festa em Casa</title>
+
+</head>
+<body>
+	<section layout:fragment="content">
+
+			<!-- <h1>Professor <span th:utext="${session.usuario.nome}">Description</span></h1> -->
+			<h2>Festa em Casa</h2>
+			<div class="container-fluid">
+			
+			<div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}"/></div>
+			
+			<div class="d-flex justify-content-around">
+			<div class="card w-50">
+			  <div class="card-body">
+			    <h5 class="card-title">Sala</h5>
+			    <div class="d-flex justify-content-around flex-wrap cenario">
+			    
+			    	<div>
+						<a th:href="@{/festa-em-casa/ligar-luz-sala}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Ligar Luz</button>
+						</a>
+					</div>
+				
+					<div>
+						<a th:href="@{/festa-em-casa/desligar-luz-sala}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Desligar Luz</button>
+						</a>
+					</div>
+					
+					<div>
+						<a th:href="@{/festa-em-casa/ligar-radio-sala}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Ligar Radio</button>
+						</a>
+					</div>
+	
+			    <div>
+						<a th:href="@{/festa-em-casa/desligar-radio-sala}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Desligar Radio</button>
+						</a>
+					</div>
+			
+			    <div>
+						<a th:href="@{/festa-em-casa/ligar-televisao-sala}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Ligar Televisão</button>
+						</a>
+					</div>
+		
+			     <div>
+						<a th:href="@{/festa-em-casa/desligar-televisao-sala}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Desligar Televisão</button>
+						</a>
+			
+			    </div>
+			    
+			    <div class="row">
+			    <p>Proteção Contra Incêndio</p>
+			    <div class="d-flex justify-content-around flex-wrap cenario">
+				    <div>
+							<a th:href="@{/festa-em-casa/ha-incendio-sala}" style=" border-radius: 15px">
+							    <button type="submit" class="btn btn-primary">Ligar Esguicho Sala</button>
+							</a>
+					</div>
+					<div>
+							<a th:href="@{/festa-em-casa/nao-ha-incendio-sala}" style=" border-radius: 15px">
+							    <button type="submit" class="btn btn-primary">Desligar Esguicho Sala</button>
+							</a>
+					</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+			
+			<div class="card w-50">
+			  <div class="card-body">
+			    <h5 class="card-title">Cozinha</h5>
+			    <div class="d-flex justify-content-around flex-wrap cenario">
+			    	<div>
+						<a th:href="@{/festa-em-casa/ligar-luz-cozinha}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Ligar Luz</button>
+						</a>
+					</div>
+				
+					<div>
+						<a th:href="@{/festa-em-casa/desligar-luz-cozinha}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Desligar Luz</button>
+						</a>
+					</div>
+					<div>
+						<a th:href="@{/festa-em-casa/ligar-radio-cozinha}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Ligar Radio</button>
+						</a>
+					</div>
+	
+			    <div>
+						<a th:href="@{/festa-em-casa/desligar-radio-cozinha}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Desligar Radio</button>
+						</a>
+					</div>
+			
+			    <div>
+						<a th:href="@{/festa-em-casa/ligar-televisao-cozinha}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Ligar Televisão</button>
+						</a>
+					</div>
+		
+			     <div>
+						<a th:href="@{/festa-em-casa/desligar-televisao-cozinha}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Desligar Televisão</button>
+						</a>
+			
+			    </div>
+			    <div>
+						<a th:href="@{/festa-em-casa/ligar-cafeteira-cozinha}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Ligar Cafeteira</button>
+						</a>
+					</div>
+					<div>
+						<a th:href="@{/festa-em-casa/desligar-cafeteira-cozinha}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Desligar Cafeteira</button>
+						</a>
+					</div>
+					<div>
+						<a th:href="@{/festa-em-casa/fazer-cafe-cozinha}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Fazer Café</button>
+						</a>
+					</div>
+				    <div class="row">
+					<p>Proteção Contra Incêndio</p>
+					<div class="d-flex justify-content-around flex-wrap cenario">
+					    <div>
+								<a th:href="@{/festa-em-casa/ha-incendio-cozinha}" style=" border-radius: 15px">
+								    <button type="submit" class="btn btn-primary">Ligar Esguicho Cozinha</button>
+								</a>
+						</div>
+						<div>
+								<a th:href="@{/festa-em-casa/nao-ha-incendio-cozinha}" style=" border-radius: 15px">
+								    <button type="submit" class="btn btn-primary">Desligar Esguicho Cozinha</button>
+								</a>
+						</div>
+						</div>
+					</div>
+			    </div>
+			
+			  </div>
+			</div>
+			
+			<div class="card w-50">
+			  <div class="card-body">
+			    <h5 class="card-title">Banheiro</h5>
+			    <div class="d-flex justify-content-around flex-wrap cenario">
+			    	<div>
+						<a th:href="@{/festa-em-casa/ligar-luz-banheiro}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Ligar Luz</button>
+						</a>
+					</div>
+				
+					<div>
+						<a th:href="@{/festa-em-casa/desligar-luz-banheiro}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Desligar Luz</button>
+						</a>
+					</div>
+					<div>
+						<a th:href="@{/festa-em-casa/ligar-privada-banheiro}" style=" border-radius: 15px">
+						    <button type="submit" class="btn btn-primary">Descarga</button>
+						</a>
+					</div>
+				    <div class="row">
+				    <p>Proteção Contra Incêndio</p>
+					<div class="d-flex justify-content-around flex-wrap cenario">
+					    <div>
+								<a th:href="@{/festa-em-casa/ha-incendio-banheiro}" style=" border-radius: 15px">
+								    <button type="submit" class="btn btn-primary">Ligar Esguicho Banheiro</button>
+								</a>
+						</div>
+						<div>
+								<a th:href="@{/festa-em-casa/nao-ha-incendio-banheiro}" style=" border-radius: 15px">
+								    <button type="submit" class="btn btn-primary">Desligar Esguicho Banheiro</button>
+								</a>
+						</div>
+						</div>
+					</div>
+			    </div>
+			
+			  </div>
+			</div>
+			</div>
+			
+			
+			
+
+			
+		</div>
+	</section>
+
+</body>
+</html>
